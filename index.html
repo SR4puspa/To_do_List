@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D To-Do List with User Login</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- User Login Form -->
+    <section id="user-login-section" class="centered-section">
+      <form id="user-form" autocomplete="off">
+        <div class="input-group">
+          <i class="fas fa-user user-icon"></i>
+          <input
+            type="text"
+            id="username-input"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <button type="submit" title="Submit Name">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+    </section>
+
+    <!-- Main To-Do App Section, hidden initially -->
+    <section id="todo-app-section" class="hidden">
+      <header>
+        <h1>To-Do List for <span id="display-username"></span></h1>
+        <div class="datetime">
+          <span id="date"></span>
+          <span id="time"></span>
+        </div>
+        <button id="mode-toggle" title="Toggle Dark/Light Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </header>
+
+      <section class="todo-section">
+        <form id="todo-form">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="Add a new task..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" title="Add Task">
+            <i class="fas fa-plus"></i>
+          </button>
+        </form>
+
+        <ul id="todo-list"></ul>
+      </section>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
